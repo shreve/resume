@@ -24,11 +24,11 @@
 
 \vspace{0.25in}
 
-{517.518.2358 \hspace{0.3in} shreve@umich.edu \hspace{0.3in} jacobevanshreve.me \hspace{0.3in} github.com/shreve}
+{517.518.2358 \hspace{0.3in} jacob@shreve.io \hspace{0.3in} shreve.io \hspace{0.3in} github.com/shreve}
 \vspace{0.25in}
 
 \textit{\large{
-An ambitious, adaptable learner with four years of real-world tech industry experience
+An ambitious, adaptable learner with five years of real-world tech industry experience
 collaborating in small teams to get things done.
 }}
 \vspace{0.25in}
@@ -57,9 +57,6 @@ projects targeted toward making the operations of non-profit organizations easie
 especially datekeeper.org, an event management system targeted toward non-profits.
 \vspace{0.25in}
 
-See my website for more work experience.
-\vspace{0.25in}
-
 \vspace{0.15in}
 {\Large\textbf{Education}}
 \vspace{0.15in}
@@ -81,6 +78,7 @@ Engineering prerequisites, including Calculus 1-4, Linear Algebra, Chemistry, an
   \item{Strong team communication and collaboration skills}
   \item{Proficiency in Ruby, JavaScript, Elixir, Python, C/C++, SQL, HTML/CSS}
   \item{Linux server management, including web app and email servers}
+  \item{Containerized app cluster management using Kubernetes}
   \item{Git and Mercurial version control systems}
 \end{itemize}
 
