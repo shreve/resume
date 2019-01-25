@@ -1,6 +1,7 @@
 \documentclass[10pt,letter]{article}
 \usepackage{fontspec,tikz}
 \usepackage[margin=1.5in, top=1in, bottom=1in]{geometry}
+\usepackage{enumitem}
 
 %% \setmainfont{Avenir Next LT Pro}
 \setlength{\parindent}{0pt}
@@ -15,8 +16,8 @@
 \hspace*{-1.1in}
 \begin{tikzpicture}[scale=0.6]
   \fill[gold!100] (0,0) rectangle (1,1);
-  \fill[magentared!100] (1.2, 0) rectangle (2.2, 1);
-  \fill[lightblue!100] (2.4, 0) rectangle (3.4, 1);
+  \fill[lightblue!100] (1.2, 0) rectangle (2.2, 1);
+  \fill[magentared!100] (2.4, 0) rectangle (3.4, 1);
 \end{tikzpicture}
 
 \vspace*{-0.25in}
@@ -33,56 +34,55 @@ collaborating in small teams to get things done.
 }}
 \vspace{0.25in}
 
-\vspace{0.15in}
-{\Large\textbf{Experience}}
+{\LARGE\textbf{Experience}}
 \vspace{0.15in}
 
-\textbf{Lead Engineer, Wellopp; Toledo, OH \hfill Jan 2016-Dec 2018}\\
+\textbf{Lead Engineer, Wellopp \hfill Jan 2016-Dec 2018}\\
 Wellopp is dedicated to reducing uneccessary hospital readmissions. At Wellopp, I led
 the development of Wellopp Messenger, an SMS-powered patient outreach tool using Ruby on Rails
 and 3rd party vendors like Twilio. I also led the infrastructure transition from plain Ubuntu VMs to Kubernetes clusters and wrote a bulk of the company's internal documentation on the subject.
 \vspace{0.25in}
 
-\textbf{Sole Proprietor, I Make Websites, LLC; Ypsilanti, MI \hfill Aug 2012-Present}\\
-I Make Websites is the company I created for my freelance programming work. This
+\textbf{Sole Proprietor, Shreve Labs, LLC \hfill Aug 2012-Present}\\
+Shreve Labs (formerly I Make Websites) is the company I created for my freelance programming work. This
 encapsulates all of my experience working solo to meet with clients, discuss project goals,
 develop timelines, and get things done.
 \vspace{0.25in}
 
-\textbf{Web Developer, Online Ventures; Brighton, MI \hfill Apr 2012-May 2014}\\
+\textbf{Web Developer, Online Ventures \hfill Apr 2012-May 2014}\\
 Online Ventures is a tech consultancy that focuses on improving clients’ business performance.
-I worked on several projects supporting non-profit organizations,
+I developed features on several projects supporting non-profit organizations,
 especially datekeeper.org, a fundraiser management system.
+
 \vspace{0.25in}
-
-\vspace{0.15in}
-{\Large\textbf{Education}}
+{\LARGE\textbf{Education}}
 \vspace{0.15in}
 
-\textbf{University of Michigan, Ann Arbor \hfill  Fall 2016-Present} \\
+\textbf{University of Michigan \hfill  Expected Spring 2020} \\
 Bachelor's in Computer Science in Engineering, Minor in Political Science \\
-Data structures, algorithms, discrete math, cryptography, statistics, computer architecture
+\textit{Course Work: } Cryptography, Computer Architecture, Foundations of CS, Data Structures and Algorithms, Discrete Mathematics, Statistics, Computer Game Design
 
-\vspace{0.05in}
+\textit{Courses Remaining: } Intro to Computer Security, Operating Systems, Networks
 
-\textit{Project: Miner Mayhem} Created a 4-player cooperative grappling hook racing game created with Unity3D in a team of 4.
+\textit{Project: Miner Mayhem } Created a 4-player cooperative grappling hook racing game created with Unity3D in a team of 4.
 
-\vspace{0.25in}
-
-\textbf{Washtenaw Community College, Ann Arbor \hfill  Fall 2013-Winter 2016} \\
-Engineering prerequisites, including Calculus 1-4, Linear Algebra, Chemistry, and Physics
+\textit{Project: Secret Sharing } Created a tool to create $n$ password shares, for which $m \leq n$ must be reunited to recover the original password, à la nuclear launch codes
 
 \vspace{0.25in}
 
-\vspace{0.15in}
-{\Large\textbf{Skills}}
+\textbf{Washtenaw Community College \hfill  Completed Winter 2016} \\
+Engineering prerequisites: Calculus 1-4, Linear Algebra, Chemistry, Physics, Technical Writing, Technical Communication
 
-\begin{itemize}
-  \item{Strong team communication and collaboration skills}
-  \item{Proficiency in C/C++, Ruby, JavaScript, Golang, SQL, HTML/CSS, Unity3D/C\#}
-  \item{Linux server management, including web app and email servers}
-  \item{Containerized app cluster management using Docker and Kubernetes}
+\vspace{0.25in}
+
+{\LARGE\textbf{Skills}}
+
+\begin{itemize}[leftmargin=1em]
+  \setlength\itemsep{-0.3em}
+  \item{Proficiency in Ruby, Golang, Unity3D/C\#, HTML/CS/JS, C/C++, SQL}
+  \item{Server management with Docker and Kubernetes, app servers, email servers}
   \item{Git and Mercurial version control systems}
+  \item{Experience wrting high-level process and code documentation}
 \end{itemize}
 
 \end{document}
