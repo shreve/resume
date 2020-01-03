@@ -2,6 +2,7 @@
 \usepackage{fontspec,tikz}
 \usepackage[margin=1.5in, top=1in, bottom=1in]{geometry}
 \usepackage{enumitem}
+\usepackage[none]{hyphenat}
 
 %% \setmainfont{Avenir Next LT Pro}
 \setlength{\parindent}{0pt}
@@ -25,53 +26,66 @@
 
 \vspace{0.25in}
 
-{517.518.2358 \hspace{0.3in} jacob@shreve.io \hspace{0.3in} shreve.io \hspace{0.3in} github.com/shreve}
+{jacob@shreve.io \hfill shreve.io \hfill github.com/shreve \hfill 517.518.2358 on Signal}
 \vspace{0.25in}
 
 \textit{\large{
-An ambitious, adaptable learner with six years of real-world tech industry experience
-collaborating in small teams to get things done.
+Ambitious, adaptable software engineer with 5+ years full-stack web application development experience
+and a focus on the security mindset.
 }}
 \vspace{0.25in}
 
 {\LARGE\textbf{Experience}}
 \vspace{0.15in}
 
-\textbf{Lead Engineer, Wellopp \hfill Jan 2016-Dec 2018}\\
-Wellopp is dedicated to reducing uneccessary hospital readmissions. At Wellopp, I led
-the development of Wellopp Messenger, an SMS-powered patient outreach tool using Ruby on Rails
-and 3rd party vendors like Twilio. I also led the infrastructure transition from plain Ubuntu VMs to Kubernetes clusters and wrote a bulk of the company's internal documentation on the subject.
-\vspace{0.25in}
+\textbf{Lead Engineer, Wellopp \hfill Jan 2016-Aug 2019}\\
+Wellopp is a healthcare startup dedicated to reducing uneccessary hospital readmissions.
+\begin{itemize}[leftmargin=1em]
+  \setlength\itemsep{-0.3em}
+  \item Directed development of the SMS interface for Wellopp products.
+  \item Mentored 2 interns and got them up to speed in our tech stack.
+  \item Maintained provider-facing patient data dashboard.
+  \item Transitioned infrastructure from Ubuntu VMs to Kubernetes and wrote the company's documentation on the subject.
+\end{itemize}
+\vspace{0.15in}
 
 \textbf{Sole Proprietor, Shreve Labs, LLC \hfill Aug 2012-Present}\\
-Shreve Labs (formerly I Make Websites) is the company I created for my freelance programming work. This
-encapsulates all of my experience working solo to meet with clients, discuss project goals,
-develop timelines, and get things done.
-\vspace{0.25in}
+Shreve Labs is the company I created for my freelance work and side projects.
+% \vspace{-0.05in}
+\begin{itemize}[leftmargin=1em]
+  \setlength\itemsep{-0.3em}
+  \item Developed and maintained software for diverse clients around the world.
+  \item Administered accounting and taxes for a small business.
+\end{itemize}
+\vspace{0.15in}
 
 \textbf{Web Developer, Online Ventures \hfill Apr 2012-May 2014}\\
-Online Ventures is a tech consultancy that focuses on improving clients’ business performance.
-I developed features on several projects supporting non-profit organizations,
-especially datekeeper.org, a fundraiser management system.
+Online Ventures is a consultancy that improves clients’ business performance with software.
+\begin{itemize}[leftmargin=1em]
+  \setlength\itemsep{-0.3em}
+  \item Built custom management software for several local businesses.
+\end{itemize}
+\vspace{0.15in}
 
-\vspace{0.25in}
 {\LARGE\textbf{Education}}
 \vspace{0.15in}
 
-\textbf{University of Michigan \hfill  Expected Spring 2020} \\
+\textbf{University of Michigan \hfill  Expected May 2020} \\
 Bachelor's in Computer Science in Engineering
 \begin{itemize}[leftmargin=1em]
   \setlength\itemsep{-0.3em}
-  \item \textit{Course Work: } Cryptography, Computer Architecture, Foundations of CS, Data Structures and Algorithms, Discrete Mathematics, Statistics, Computer Game Design
-  \item \textit{Courses Remaining: } Intro to Computer Security, Operating Systems, Networks
-  \item \textit{Project: Miner Mayhem } Created a 4-player cooperative grappling hook racing game with Unity3D in a team of 4. Placed 4th of 20 in final showcase.
-  \item \textit{Project: Secret Sharing } Created a tool to create $n$ password shares, for which $m \leq n$ must be reunited to recover the original password, à la nuclear launch codes.
+  \item \textit{Course Work: } Cryptography, Computer Architecture, Computer Security, Operating Systems, Foundations of CS, Discrete Mathematics, Statistics, Computer Game Design
+  \item \textit{Paper: Post-Quantum Crypto } Co-wrote a paper explaining lattice-based cryptosystems.
+  \item \textit{Project: Secret Sharing } Created a library which implements Shamir's Secret Sharing.
+  \item \textit{Project: Web Security } Produced SQL-injection, XSS, and CSRF expoits.
+  \item \textit{Project: Network Security } Used aircrack, nmap, and telnet to break into a network.
+  \item \textit{Project: Network File System } Developed a concurrent, remote, crash-safe file system.
 \end{itemize}
 
-\vspace{0.15in}
+%% \vspace{0.15in}
 
-\textbf{Washtenaw Community College \hfill  Completed Winter 2016} \\
-Engineering prerequisites: Calculus 1-4, Linear Algebra, Chemistry, Physics, Technical Writing, Technical Communication
+%% \textbf{Washtenaw Community College \hfill  Completed Dec 2016} \\
+%% Engineering prereqs: Calculus 1-4, Linear Algebra, Chemistry, Physics, Technical Writing
 
 \vspace{0.25in}
 
@@ -79,11 +93,12 @@ Engineering prerequisites: Calculus 1-4, Linear Algebra, Chemistry, Physics, Tec
 
 \begin{itemize}[leftmargin=1em]
   \setlength\itemsep{-0.3em}
-  \item{Proficiency in Ruby, Golang, Unity3D/C\#, HTML/CS/JS, C/C++, SQL}
-  \item{Server management with Docker and Kubernetes, app servers, email servers}
-  \item{Collaborating in teams with Git and Mercurial version control systems}
-  \item{Experience writing high-level process and code documentation}
-  \item{Linux nerdery: Emacs, i3wm, Fish Shell, tons of bash scripts in a dotfiles repo}
+  \item{Proficiency in Golang, C++, Ruby, HTML/CS/JS, SQL, Unity3D/C\#}
+  \item{Service deployment with Nginx, Docker and Kubernetes}
+  \item{Network examination with nmap and Wireshark}
+  \item{Collaborating in teams with Git}
+  \item{Writing documentation of high-level processes and code}
+  \item{Linux power user: Emacs, i3wm, Fish Shell, tons of bash scripts}
 \end{itemize}
 
 \end{document}
