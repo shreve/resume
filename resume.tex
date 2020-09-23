@@ -1,7 +1,8 @@
-\documentclass[10pt,letter]{article}
+\documentclass[10pt]{article}
 \usepackage{fontspec,tikz}
-\usepackage[margin=1.5in, top=1in, bottom=1in]{geometry}
+\usepackage[letterpaper, margin=1.2in, top=1in, bottom=1in]{geometry}
 \usepackage{enumitem}
+\usepackage{textpos}
 \usepackage[none]{hyphenat}
 
 %% \setmainfont{Avenir Next LT Pro}
@@ -12,93 +13,101 @@
 \definecolor{magentared}{rgb}{0.9,0,0.5}
 \definecolor{lightblue}{rgb}{0.1,0.7,1}
 
+\newcommand{\invisible}[1]{
+  \begin{textblock}{100} (0,0)
+    \textcolor{white}{#1}
+  \end{textblock}
+}
+
+\newcommand \fullname {Jacob Evan Shreve}
+\newcommand \user {shreve}
+\newcommand \phone {517.518.2358}
+
+\newcommand{\dummymode}{
+  \renewcommand \fullname {Jacob Smith}
+  \renewcommand \user {smith}
+  \renewcommand \phone {555.867.5309}
+}
+
 \begin{document}
 
-\hspace*{-1.1in}
-\begin{tikzpicture}[scale=0.6]
-  \fill[gold!100] (0,0) rectangle (1,1);
-  \fill[lightblue!100] (1.2, 0) rectangle (2.2, 1);
-  \fill[magentared!100] (2.4, 0) rectangle (3.4, 1);
-\end{tikzpicture}
+\invisible{https://shreve.io}
 
-\vspace*{-0.25in}
-\textbf{\Huge Jacob Evan Shreve}
+               %% width, x, y
+\begin{textblock}{0}(9.70,0.1)
+  \begin{tikzpicture}[scale=0.6, rotate=90]
+    \fill[magentared!100] (0, 0) rectangle (1, 1);
+    \fill[lightblue!100] (0, 1.5) rectangle (1, 2.5);
+    \fill[gold!100] (0, 3) rectangle (1, 4);
+  \end{tikzpicture}
+\end{textblock}
 
-\vspace{0.25in}
+\textbf{\Huge \fullname}
 
-{jacob@shreve.io \hfill shreve.io \hfill github.com/shreve \hfill 517.518.2358 on Signal}
-\vspace{0.25in}
+% \vspace{0.05in}
+% {\Large Systems programmer and aspiring cryptography engineer}
 
-\textit{\large{
-Ambitious, adaptable software engineer with 5+ years full-stack web application development experience
-and a focus on the security mindset.
-}}
-\vspace{0.25in}
+\vspace{0.15in}
+{\Large jacob@\user.io \hfill \user.io \hfill github.com/\user \hfill \phone}\\
+\vspace{0.10in}
 
 {\LARGE\textbf{Experience}}
 \vspace{0.15in}
 
-\textbf{Lead Engineer, Wellopp \hfill Jan 2016-Aug 2019}\\
+\textbf{Research Assistant, Refraction Networking, Remote \hfill Summer 2020}\\
+Refraction Networking is a series of censorship circumvention tools.
+\begin{itemize}[leftmargin=1em]
+  \setlength\itemsep{-0.3em}
+  \item Developed method to resume TLS 1.3 sessions on a proxy server with OpenSSL, C, and Rust.
+  \item Updated Tapdance protocol spec and Golang client implementation to reflect TLS 1.3 changes.
+\end{itemize}
+\vspace{0.15in}
+
+\textbf{Software Engineer, Wellopp, Remote \hfill Jan 2016-Aug 2019}\\
 Wellopp is a healthcare startup dedicated to reducing uneccessary hospital readmissions.
 \begin{itemize}[leftmargin=1em]
   \setlength\itemsep{-0.3em}
-  \item Directed development of the SMS interface for Wellopp products.
-  \item Mentored 2 interns and got them up to speed in our tech stack.
-  \item Maintained provider-facing patient data dashboard.
-  \item Transitioned infrastructure from Ubuntu VMs to Kubernetes and wrote the company's documentation on the subject.
-\end{itemize}
-\vspace{0.15in}
-
-\textbf{Sole Proprietor, Shreve Labs, LLC \hfill Aug 2012-Present}\\
-Shreve Labs is the company I created for my freelance work and side projects.
-% \vspace{-0.05in}
-\begin{itemize}[leftmargin=1em]
-  \setlength\itemsep{-0.3em}
-  \item Developed and maintained software for diverse clients around the world.
-  \item Administered accounting and taxes for a small business.
-\end{itemize}
-\vspace{0.15in}
-
-\textbf{Web Developer, Online Ventures \hfill Apr 2012-May 2014}\\
-Online Ventures is a consultancy that improves clients’ business performance with software.
-\begin{itemize}[leftmargin=1em]
-  \setlength\itemsep{-0.3em}
-  \item Built custom management software for several local businesses.
+  \item Developed SMS patient outreach product using Twilio API and Ruby on Rails.
+  \item Containerized application and created CI/CD pipeline with CircleCI and Kubernetes.
+  \item Started a documentation corpus for onboarding, deployment, and maintenance topics.
 \end{itemize}
 \vspace{0.15in}
 
 {\LARGE\textbf{Education}}
 \vspace{0.15in}
 
-\textbf{University of Michigan \hfill  Expected May 2020} \\
-Bachelor's in Computer Science in Engineering
+\textbf{B.S.E. in Computer Science \hfill  Graduated August 2020} \\
+University of Michigan, Ann Arbor
+
 \begin{itemize}[leftmargin=1em]
   \setlength\itemsep{-0.3em}
-  \item \textit{Course Work: } Cryptography, Computer Architecture, Computer Security, Operating Systems, Foundations of CS, Discrete Mathematics, Statistics, Computer Game Design
-  \item \textit{Paper: Post-Quantum Crypto } Co-wrote a paper explaining lattice-based cryptosystems.
-  \item \textit{Project: Secret Sharing } Created a library which implements Shamir's Secret Sharing.
-  \item \textit{Project: Web Security } Produced SQL-injection, XSS, and CSRF expoits.
-  \item \textit{Project: Network Security } Used aircrack, nmap, and telnet to break into a network.
-  \item \textit{Project: Network File System } Developed a concurrent, remote, crash-safe file system.
+  \item \textit{Course Work: } Cryptography, Computer Security, Computer Architecture, Operating Systems, Web Systems, Algorithms, Statistics
+  \item Created UI for WolverineSoft Game Dev Club's Semester Studio Project with over 60 contributors
 \end{itemize}
+\vspace{0.15in}
 
-%% \vspace{0.15in}
-
-%% \textbf{Washtenaw Community College \hfill  Completed Dec 2016} \\
-%% Engineering prereqs: Calculus 1-4, Linear Algebra, Chemistry, Physics, Technical Writing
-
+{\LARGE\textbf{Projects}}
+\begin{itemize}[leftmargin=1em]
+  \setlength\itemsep{-0.3em}
+  \item \textit{Roku:} Libraries in Go, Ruby, and Rust which find and control Roku devices on the network.
+  \item \textit{tui:} A Go library for building and efficiently rendering terminal user interface applications
+  \item \textit{sso:} Automatic multi-site SSO library in Go \`{a} la Stack Exchange.
+  \item \textit{Secret Sharing:} A Ruby library which implements Shamir's Secret Sharing.
+  \item \textit{Web Security:} SQL-injection, XSS, and CSRF expoits in CTF challenges.
+  \item \textit{Network File System:} A concurrent, remote over TCP, crash-safe file system interface.
+  \item \textit{MapReduce Server:} Hadoop-style master and worker for distributed computation with Python
+\end{itemize}
 \vspace{0.25in}
 
 {\LARGE\textbf{Skills}}
-
 \begin{itemize}[leftmargin=1em]
   \setlength\itemsep{-0.3em}
-  \item{Proficiency in Golang, C++, Ruby, HTML/CS/JS, SQL, Unity3D/C\#}
-  \item{Service deployment with Nginx, Docker and Kubernetes}
-  \item{Network examination with nmap and Wireshark}
-  \item{Collaborating in teams with Git}
-  \item{Writing documentation of high-level processes and code}
-  \item{Linux power user: Emacs, i3wm, Fish Shell, tons of bash scripts}
+  \item{Golang, Ruby, C++, HTML/CSS/JS, SQL, Python, PHP. Learning Rust.}
+  \item{PostgreSQL, SQLite3 database administration}
+  \item{OS programming: concurrency, memory management, resource contention}
+  \item{Networked programming: sockets, TCP/IP, TLS, DNS}
+  \item{Deployment with Nginx, Docker, and Kubernetes. Experience with GCP, AWS, and Heroku.}
+  \item{Mastery of shared version control with Git}
+  \item{Debugging: I love finding the source of a bug by searching logs, gdb, or just reading the code}
 \end{itemize}
-
 \end{document}
