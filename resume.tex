@@ -1,17 +1,27 @@
 \documentclass[10pt]{article}
 \usepackage{fontspec,tikz}
-\usepackage[letterpaper, margin=1.2in, top=1in, bottom=1in]{geometry}
+\usepackage[letterpaper, margin=1in, top=0.5in, bottom=0.5in]{geometry}
 \usepackage{enumitem}
 \usepackage{textpos}
+\usepackage{xhfill}
+\usepackage[hidelinks]{hyperref}
 \usepackage[none]{hyphenat}
 
-%% \setmainfont{Avenir Next LT Pro}
+\hypersetup{
+  bookmarks = true,
+  colorlinks = false,
+  pdftitle = {Jacob Evan Shreve -- Software Engineer Candidate},
+  pdfpagemode = FullScreen
+}
+\urlstyle{same}
+
 \setlength{\parindent}{0pt}
 \pagenumbering{gobble}
 
 \definecolor{gold}{rgb}{1,0.9,0.2}
 \definecolor{magentared}{rgb}{0.9,0,0.5}
 \definecolor{lightblue}{rgb}{0.1,0.7,1}
+\definecolor{grey}{rgb}{0.6,0.6,0.6}
 
 \newcommand{\invisible}[1]{
   \begin{textblock}{100} (0,0)
@@ -29,85 +39,134 @@
   \renewcommand \phone {555.867.5309}
 }
 
-\begin{document}
+\newcommand{\sectiontitle}[1]{
+  %                    lift,   width, weight
+  {\color{grey}\rule[0.15cm]{0.5cm}{0.5pt}}
+  {\Large\textbf{#1}}
+  %         lift,  weight
+  \xrfill[0.1cm]{0.5pt}[grey]
+}
 
-\invisible{https://shreve.io}
+\newcommand{\itempad}{\vspace{0.1in}}
 
-               %% width, x, y
-\begin{textblock}{0}(9.70,0.1)
-  \begin{tikzpicture}[scale=0.6, rotate=90]
-    \fill[magentared!100] (0, 0) rectangle (1, 1);
-    \fill[lightblue!100] (0, 1.5) rectangle (1, 2.5);
-    \fill[gold!100] (0, 3) rectangle (1, 4);
-  \end{tikzpicture}
-\end{textblock}
+  \begin{document}
 
-\textbf{\Huge \fullname}
+  \invisible{https://shreve.io}
 
-% \vspace{0.05in}
-% {\Large Systems programmer and aspiring cryptography engineer}
+  %% width, x, y
+  \begin{textblock}{0}(10.3,0.0)
+    \begin{tikzpicture}[scale=0.65, rotate=90]
+      \fill[magentared!100] (0, 0) rectangle (1, 1);
+      \fill[lightblue!100] (0, 1.5) rectangle (1, 2.5);
+      \fill[gold!100] (0, 3) rectangle (1, 4);
+    \end{tikzpicture}
+  \end{textblock}
 
-\vspace{0.15in}
-{\Large jacob@\user.io \hfill \user.io \hfill github.com/\user \hfill \phone}\\
-\vspace{0.10in}
+  \textbf{\Huge \fullname}
 
-{\LARGE\textbf{Experience}}
-\vspace{0.15in}
+  \vspace{0.15in}
+  {\Large \href{mailto:hire-me@shreve.io}{hire-me@\user.io} \hfill
+  \href{https://shreve.io}{\user.io} \hfill
+  \href{https://github.com/shreve}{github.com/\user} \hfill
+  \phone}\\
+  \vspace{0.05in}
 
-\textbf{Research Assistant, Refraction Networking, Remote \hfill Summer 2020}\\
-Refraction Networking is a series of censorship circumvention tools.
-\begin{itemize}[leftmargin=1em]
-  \setlength\itemsep{-0.3em}
-  \item Developed method to resume TLS 1.3 sessions on a proxy server with OpenSSL, C, and Rust.
-  \item Updated Tapdance protocol spec and Golang client implementation to reflect TLS 1.3 changes.
-\end{itemize}
-\vspace{0.15in}
+  %%
+  %% Experience
+  %%
+  \sectiontitle{Experience}
+  \vspace{0.1in}
 
-\textbf{Software Engineer, Wellopp, Remote \hfill Jan 2016-Aug 2019}\\
-Wellopp is a healthcare startup dedicated to reducing uneccessary hospital readmissions.
-\begin{itemize}[leftmargin=1em]
-  \setlength\itemsep{-0.3em}
-  \item Developed SMS patient outreach product using Twilio API and Ruby on Rails.
-  \item Containerized application and created CI/CD pipeline with CircleCI and Kubernetes.
-  \item Started a documentation corpus for onboarding, deployment, and maintenance topics.
-\end{itemize}
-\vspace{0.15in}
+  \textbf{Research Assistant, \href{https://refraction.network/}{Refraction Networking}, Remote \hfill Summer 2020}\\
+  Refraction Networking is a project which develops censorship circumvention tools.
+  \vspace{-0.07in}
+  \begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{-0.3em}
+    \item Developed method to resume TLS 1.3 sessions on a proxy server with OpenSSL, C, and Rust.
+    \item Updated Tapdance protocol spec and Golang client implementation to reflect TLS 1.3 changes.
+    \item References: \href{https://ericw.us/trow/}{Eric Wustrow}, \href{https://www.linkedin.com/in/jack-wampler-24a65190/}{Jack Wampler}, and \href{https://jhalderm.com/}{J. Alex Halderman}
+  \end{itemize}
+\itempad
 
-{\LARGE\textbf{Education}}
-\vspace{0.15in}
+  \textbf{Software Engineer, \href{https://wellopp.com/}{Wellopp}, Remote \hfill Jan 2016-Aug 2019}\\
+  Wellopp is a healthcare startup dedicated to reducing uneccessary hospital readmissions.
+  \vspace{-0.07in}
+  \begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{-0.3em}
+    \item Developed SMS patient outreach product using Twilio API and Ruby on Rails.
+    \item Containerized application and created CI/CD pipeline with CircleCI and Kubernetes.
+    \item Started a documentation corpus for onboarding, deployment, and maintenance topics.
+    \item References: \href{https://www.linkedin.com/in/jon-wiedmann-b6442b67/}{Jon Wiedmann},
+      \href{https://www.linkedin.com/in/nicholasgronow/}{Nicholas Gronow},
+      and \href{https://www.linkedin.com/in/andrew-stewart-95772914b/}{Andrew Stewart}
+  \end{itemize}
+\itempad
 
-\textbf{B.S.E. in Computer Science \hfill  Graduated August 2020} \\
-University of Michigan, Ann Arbor
+  \textbf{Freelance Web Developer, Shreve Labs, Remote \hfill Aug 2014-Dec 2015}\\
+  Shreve Labs is the company I created for my freelance work and side projects.
+  \vspace{-0.07in}
+  \begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{-0.3em}
+    \item Developed and maintained Ruby and Ruby on Rails software for clients around the world.
+  \end{itemize}
+\itempad
 
-\begin{itemize}[leftmargin=1em]
-  \setlength\itemsep{-0.3em}
-  \item \textit{Course Work: } Cryptography, Computer Security, Computer Architecture, Operating Systems, Web Systems, Algorithms, Statistics
-  \item Created UI for WolverineSoft Game Dev Club's Semester Studio Project with over 60 contributors
-\end{itemize}
-\vspace{0.15in}
+  \textbf{Web Developer, \href{https://www.linkedin.com/company/online-ventures/}{Online Ventures}, Howell, MI \hfill Apr 2012-May 2014}\\
+  Online Ventures is a consultancy that improves clients’ business performance with software.
+  \vspace{-0.07in}
+  \begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{-0.3em}
+    \item Created specialized CMS software for several local businesses to complement their workflows.
+  \end{itemize}
+\itempad
 
-{\LARGE\textbf{Projects}}
-\begin{itemize}[leftmargin=1em]
-  \setlength\itemsep{-0.3em}
-  \item \textit{Roku:} Libraries in Go, Ruby, and Rust which find and control Roku devices on the network.
-  \item \textit{tui:} A Go library for building and efficiently rendering terminal user interface applications
-  \item \textit{sso:} Automatic multi-site SSO library in Go \`{a} la Stack Exchange.
-  \item \textit{Secret Sharing:} A Ruby library which implements Shamir's Secret Sharing.
-  \item \textit{Web Security:} SQL-injection, XSS, and CSRF expoits in CTF challenges.
-  \item \textit{Network File System:} A concurrent, remote over TCP, crash-safe file system interface.
-  \item \textit{MapReduce Server:} Hadoop-style master and worker for distributed computation with Python
-\end{itemize}
-\vspace{0.25in}
 
-{\LARGE\textbf{Skills}}
-\begin{itemize}[leftmargin=1em]
-  \setlength\itemsep{-0.3em}
-  \item{Golang, Ruby, C++, HTML/CSS/JS, SQL, Python, PHP. Learning Rust.}
-  \item{PostgreSQL, SQLite3 database administration}
-  \item{OS programming: concurrency, memory management, resource contention}
-  \item{Networked programming: sockets, TCP/IP, TLS, DNS}
-  \item{Deployment with Nginx, Docker, and Kubernetes. Experience with GCP, AWS, and Heroku.}
-  \item{Mastery of shared version control with Git}
-  \item{Debugging: I love finding the source of a bug by searching logs, gdb, or just reading the code}
-\end{itemize}
+  %%
+  %% Education
+  %%
+  \sectiontitle{Education}
+  \vspace{0.1in}
+
+  \textbf{\href{https://ro.umich.edu/graduation/diplomas/degree-verification?dvid=C68OH1JS}{B.S.E. in Computer Science} \hfill  Graduated August 2020} \\
+  University of Michigan, Ann Arbor
+  \vspace{-0.07in}
+  \begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{-0.3em}
+    \item \textit{Course Work: } Cryptography, Computer Security, Computer Architecture, Operating Systems,\\
+      Web Systems, Data Structures \& Algorithms, Statistics, Video Game Development, Ethics
+    \item Created UI for \href{https://wolverinesoft-studio.itch.io/io}{WolverineSoft Game Dev Club's Semester Studio Project} with over 60 contributors
+  \end{itemize}
+\itempad
+
+  %%
+  %% Projects
+  %%
+  \sectiontitle{Projects}
+  \begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{-0.3em}
+    \item \textit{MapReduce Server:} Hadoop-style master and worker for distributed computation with Python
+    \item \textit{Network File System:} A concurrent, remote over TCP, crash-safe file system interface
+    \item \textit{Web Security:} SQL-injection, XSS, and CSRF expoits in CTF challenges
+    \item \textit{\href{https://github.com/shreve/go-roku}{Roku}:} Libraries in Go, Ruby, and Rust which find and control Roku devices on the network
+    \item \textit{\href{https://github.com/shreve/tui}{tui}:} A Go library for building and efficiently rendering terminal user interface applications
+    \item \textit{\href{https://github.com/shreve/sso}{sso}:} Automatic multi-site single sign on library in Go \`{a} la Stack Exchange
+    \item \textit{\href{https://github.com/shrve/shared-secret}{Secret Sharing}:} A Ruby library which implements Shamir's Secret Sharing
+  \end{itemize}
+\itempad
+
+  %%
+  %% Skills
+  %%
+  \sectiontitle{Skills}
+
+  \begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{-0.3em}
+    \item{Golang, Ruby, Python, C, C++, HTML/CSS/JS, SQL, PHP, Unity3D/C\#. Learning Rust.}
+    \item{PostgreSQL, SQLite3 database administration}
+    \item{DevOps with Docker and Kubernetes. Experience with GCP, AWS, and Heroku.}
+    \item{OS programming: concurrency, memory management, resource contention}
+    \item{Networked programming: sockets, TCP/IP, TLS, DNS}
+    \item{Mastery of shared version control with Git}
+    \item{Debugging: I love finding the source of a bug by searching logs, gdb, or just reading the code}
+  \end{itemize}
 \end{document}
