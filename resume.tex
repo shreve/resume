@@ -10,7 +10,7 @@
 \hypersetup{
   bookmarks = true,
   colorlinks = false,
-  pdftitle = {Jacob Evan Shreve -- Software Engineer Candidate},
+  pdftitle = {Violet Jane Shreve -- Senior Software Engineer},
   pdfpagemode = FullScreen
 }
 \urlstyle{same}
@@ -29,12 +29,12 @@
   \end{textblock}
 }
 
-\newcommand \fullname {Jacob Evan Shreve}
+\newcommand \fullname {Violet Jane Shreve}
 \newcommand \user {shreve}
 \newcommand \phone {517.518.2358}
 
 \newcommand{\dummymode}{
-  \renewcommand \fullname {Jacob Smith}
+  \renewcommand \fullname {Jane Smith}
   \renewcommand \user {smith}
   \renewcommand \phone {555.867.5309}
 }
@@ -72,10 +72,40 @@
   \vspace{0.05in}
 
   %%
+  %% Skills
+  %%
+  \sectiontitle{Skills}
+
+  \begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{-0.3em}
+    \item{Python, Ruby, Golang, C, C++, HTML/CSS/JS; Familiar with Rust, Lua, Unity3D/C\#}
+    \item{PostgreSQL, SQLite3 database administration}
+    \item{Containerized Dev: Docker, Kubernetes, Helm}
+    \item{Solutions Architecting in AWS: Cloudformation, EKS, RDS, ECS, CodeBuild}
+    \item{OS programming: concurrency, memory management, resource contention}
+    \item{Network programming: sockets, TCP/IP, TLS, DNS}
+    \item{Debugging: I love tracking down the source of a bug by searching logs, gdb, or just reading the code}
+  \end{itemize}
+  \itempad
+
+  %%
   %% Experience
   %%
   \sectiontitle{Experience}
-  \vspace{0.1in}
+  \itempad
+
+  \textbf{Senior Software Developer, \href{https://www.si.umich.edu}{UMSI Computing Services}, Remote \hfill Jan 2021-Present}\\
+  The CS team acts like an in-house consultancy to solve the problems of other units.
+  \vspace{-0.07in}
+  \begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{-0.3em}
+    \item Developed a data and automation hub to streamline online course delivery
+    \item Rebuilt CI pipeline for course dev, resulting in a frequent 2x speedup and fewer bugs reaching students
+    \item Contributed upstream to the Jupyter, Nbgrader, and IPython OSS projects (esp. proud of \href{https://github.com/ipython/ipython/pull/13934}{ipython\#13934})
+    \item References: Charles Yun, Michael Hess, Krista Dunger
+  \end{itemize}
+
+  \itempad
 
   \textbf{Research Assistant, \href{https://refraction.network/}{Refraction Networking}, Remote \hfill Summer 2020}\\
   Refraction Networking is a project which develops censorship circumvention tools.
@@ -86,21 +116,24 @@
     \item Updated Tapdance protocol spec and Golang client implementation to reflect TLS 1.3 changes.
     \item References: \href{https://ericw.us/trow/}{Eric Wustrow}, \href{https://www.linkedin.com/in/jack-wampler-24a65190/}{Jack Wampler}, and \href{https://jhalderm.com/}{J. Alex Halderman}
   \end{itemize}
-\itempad
+
+  \itempad
 
   \textbf{Software Engineer, \href{https://wellopp.com/}{Wellopp}, Remote \hfill Jan 2016-Aug 2019}\\
   Wellopp is a healthcare startup dedicated to reducing uneccessary hospital readmissions.
   \vspace{-0.07in}
   \begin{itemize}[leftmargin=1em]
     \setlength\itemsep{-0.3em}
-    \item Developed SMS patient outreach product using Twilio API and Ruby on Rails.
-    \item Containerized application and created CI/CD pipeline with CircleCI and Kubernetes.
-    \item Started a documentation corpus for onboarding, deployment, and maintenance topics.
-    \item References: \href{https://www.linkedin.com/in/jon-wiedmann-b6442b67/}{Jon Wiedmann},
+    \item Developed SMS patient outreach product using Twilio API, Ruby on Rails, Docker, K8s, and CircleCI
+    % \item Containerized application and created CI/CD pipeline with CircleCI and Kubernetes.
+    % \item Started a documentation corpus for onboarding, deployment, and maintenance topics.
+    \item References:
+      \href{https://www.linkedin.com/in/andrew-stewart-95772914b/}{Andrew Stewart},
       \href{https://www.linkedin.com/in/nicholasgronow/}{Nicholas Gronow},
-      and \href{https://www.linkedin.com/in/andrew-stewart-95772914b/}{Andrew Stewart}
+      and \href{https://www.linkedin.com/in/jon-wiedmann-b6442b67/}{Jon Wiedmann}
   \end{itemize}
-\itempad
+
+  \itempad
 
   \textbf{Freelance Web Developer, Shreve Labs, Remote \hfill Aug 2014-Dec 2015}\\
   Shreve Labs is the company I created for my freelance work and side projects.
@@ -109,23 +142,25 @@
     \setlength\itemsep{-0.3em}
     \item Developed and maintained Ruby and Ruby on Rails software for clients around the world.
   \end{itemize}
-\itempad
+
+  \itempad
 
   \textbf{Web Developer, \href{https://www.linkedin.com/company/online-ventures/}{Online Ventures}, Howell, MI \hfill Apr 2012-May 2014}\\
   Online Ventures is a consultancy that improves clients’ business performance with software.
   \vspace{-0.07in}
   \begin{itemize}[leftmargin=1em]
     \setlength\itemsep{-0.3em}
-    \item Created specialized CMS software for several local businesses to complement their workflows.
+    \item Created CMS software using Ruby on Rails for several local businesses.
   \end{itemize}
-\itempad
+
+  \itempad
 
 
   %%
   %% Education
   %%
   \sectiontitle{Education}
-  \vspace{0.1in}
+  \itempad
 
   \textbf{\href{https://ro.umich.edu/graduation/diplomas/degree-verification?dvid=C68OH1JS}{B.S.E. in Computer Science} \hfill  Graduated August 2020} \\
   University of Michigan, Ann Arbor
@@ -136,7 +171,7 @@
       Web Systems, Data Structures \& Algorithms, Statistics, Video Game Development, Ethics
     \item Created UI for \href{https://wolverinesoft-studio.itch.io/io}{WolverineSoft Game Dev Club's Semester Studio Project} with over 60 contributors
   \end{itemize}
-\itempad
+  \itempad
 
   %%
   %% Projects
@@ -152,21 +187,5 @@
     \item \textit{\href{https://github.com/shreve/sso}{sso}:} Automatic multi-site single sign on library in Go \`{a} la Stack Exchange
     \item \textit{\href{https://github.com/shrve/shared-secret}{Secret Sharing}:} A Ruby library which implements Shamir's Secret Sharing
   \end{itemize}
-\itempad
 
-  %%
-  %% Skills
-  %%
-  \sectiontitle{Skills}
-
-  \begin{itemize}[leftmargin=1em]
-    \setlength\itemsep{-0.3em}
-    \item{Golang, Ruby, Python, C, C++, HTML/CSS/JS, SQL, PHP, Unity3D/C\#. Learning Rust.}
-    \item{PostgreSQL, SQLite3 database administration}
-    \item{DevOps with Docker and Kubernetes. Experience with GCP, AWS, and Heroku.}
-    \item{OS programming: concurrency, memory management, resource contention}
-    \item{Networked programming: sockets, TCP/IP, TLS, DNS}
-    \item{Mastery of shared version control with Git}
-    \item{Debugging: I love finding the source of a bug by searching logs, gdb, or just reading the code}
-  \end{itemize}
 \end{document}
